@@ -125,15 +125,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav__logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
   display: flex;
   align-items: center;
-}
-
-.nav__logo-img {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  display: block;
 }
 
 .nav__links {
