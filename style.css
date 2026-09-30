@@ -8,23 +8,23 @@
 }
 
 :root {
-  --bg:        #0a0a0f;
-  --bg-alt:    #0f0f1a;
-  --surface:   #14141f;
-  --surface-2: #1c1c2e;
-  --border:    rgba(255,255,255,.08);
-  --accent:    #6c63ff;
-  --accent-2:  #a78bfa;
-  --gold:      #f59e0b;
-  --text:      #e2e8f0;
-  --text-muted:#94a3b8;
-  --green:     #4ade80;
-  --blue:      #60a5fa;
-  --radius:    12px;
-  --radius-lg: 20px;
-  --transition: .3s cubic-bezier(.4,0,.2,1);
-  --shadow:    0 4px 24px rgba(0,0,0,.4);
-  --shadow-lg: 0 8px 48px rgba(0,0,0,.6);
+  --bg:        #0c0c10;
+  --bg-alt:    #101014;
+  --surface:   #16161d;
+  --surface-2: #1e1e28;
+  --border:    rgba(255,255,255,.07);
+  --accent:    #7c6ff0;
+  --accent-2:  #a89cf5;
+  --gold:      #e8a030;
+  --text:      #dde2ec;
+  --text-muted:#8892a4;
+  --green:     #52c57a;
+  --blue:      #5b9cf6;
+  --radius:    10px;
+  --radius-lg: 16px;
+  --transition: .25s ease;
+  --shadow:    0 2px 16px rgba(0,0,0,.35);
+  --shadow-lg: 0 6px 32px rgba(0,0,0,.5);
 }
 
 html { scroll-behavior: smooth; }
@@ -125,11 +125,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav__logo {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--accent-2);
-  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: block;
 }
 
 .nav__links {
@@ -228,15 +232,15 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(108,99,255,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(108,99,255,.06) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 40%, transparent 100%);
+    linear-gradient(rgba(124,111,240,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,111,240,.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 30%, transparent 100%);
   pointer-events: none;
 }
 
 .hero__content {
-  max-width: 760px;
+  max-width: 720px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -244,39 +248,39 @@ a { color: inherit; text-decoration: none; }
 
 .hero__eyebrow {
   font-family: 'JetBrains Mono', monospace;
-  color: var(--accent-2);
-  font-size: .9rem;
-  letter-spacing: .1em;
+  color: var(--text-muted);
+  font-size: .85rem;
+  letter-spacing: .08em;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
 .hero__name {
-  font-size: clamp(3rem, 9vw, 6rem);
+  font-size: clamp(3rem, 9vw, 5.5rem);
   font-weight: 700;
-  background: linear-gradient(135deg, #fff 30%, var(--accent-2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
   margin-bottom: 16px;
+  letter-spacing: -.02em;
 }
 
 .hero__tagline {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: var(--accent-2);
-  font-weight: 500;
+  font-size: clamp(.9rem, 2vw, 1.05rem);
+  color: var(--text-muted);
+  font-weight: 400;
   margin-bottom: 20px;
-  letter-spacing: .02em;
+  letter-spacing: .01em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero__sub {
   color: var(--text-muted);
-  font-size: 1.05rem;
-  max-width: 560px;
+  font-size: 1rem;
+  max-width: 520px;
   margin: 0 auto 36px;
+  line-height: 1.7;
 }
-
-.hero__sub strong { color: var(--text); }
 
 .hero__links {
   display: flex;
@@ -400,8 +404,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .edu-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent), var(--shadow);
+  border-color: rgba(124,111,240,.4);
+  box-shadow: var(--shadow);
 }
 
 .edu-card__header {
