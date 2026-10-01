@@ -767,14 +767,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--text-muted);
   font-size: .9rem;
   transition: color var(--transition);
+  display: flex;
+  align-items: center;
 }
 
 .footer__links a:hover { color: var(--accent-2); }
-
-.footer__copy {
-  color: var(--text-muted);
-  font-size: .8rem;
-}
 
 /* =============================================
    RESPONSIVE
