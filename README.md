@@ -1,4 +1,4 @@
-# Jaylen Sze — Personal Portfolio
+# Jaylen Sze | Personal Website
 
 > **Live site:** [jaylensze.github.io](https://jaylensze.github.io)
 
