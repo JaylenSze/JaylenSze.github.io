@@ -787,3 +787,15 @@ a { color: inherit; text-decoration: none; }
   .timeline__item { gap: 20px; }
   .awards-grid { grid-template-columns: 1fr; }
 }
+
+.timeline-group {
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 40px 0 20px;
+}
+.timeline-group:first-of-type { margin-top: 0; }
+.timeline__list a { color: var(--accent-2); text-decoration: underline; }
+
