@@ -15,11 +15,11 @@
   --border:    rgba(255,255,255,.12);
   --accent:    #7c6ff0;
   --accent-2:  #a89cf5;
-  --gold:      #e8a030;
+  --gold:      #a89cf5;
   --text:      #ffffff;
   --text-muted:#ffffff;
-  --green:     #52c57a;
-  --blue:      #5b9cf6;
+  --green:     #a89cf5;
+  --blue:      #ffffff;
   --radius:    10px;
   --radius-lg: 16px;
   --transition: .25s ease;
@@ -64,7 +64,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section__title {
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-size: clamp(2.2rem, 5vw, 3rem);
   margin-bottom: 48px;
   position: relative;
   display: inline-block;
@@ -515,7 +515,7 @@ a { color: inherit; text-decoration: none; }
 
 .skill-level--adv  { background: rgba(74,222,128,.12); color: var(--green); }
 .skill-level--int  { background: rgba(96,165,250,.12); color: var(--blue); }
-.skill-level--beg  { background: rgba(148,163,184,.1); color: var(--text-muted); }
+.skill-level--beg  { background: rgba(255,255,255,.08); color: #fff; }
 
 /* =============================================
    PROJECTS
@@ -592,7 +592,7 @@ a { color: inherit; text-decoration: none; }
   flex: 1;
 }
 
-.project-card__desc strong { color: var(--text); }
+.project-card__desc strong { color: var(--accent-2); font-weight: 700; }
 
 /* =============================================
    TIMELINE (LEADERSHIP)
@@ -657,7 +657,7 @@ a { color: inherit; text-decoration: none; }
 
 .timeline__title { font-size: 1.1rem; font-weight: 700; }
 .timeline__date  { font-size: .88rem; color: var(--text-muted); white-space: nowrap; }
-.timeline__org   { font-size: .85rem; color: var(--accent-2); margin-bottom: 12px; font-weight: 500; }
+.timeline__org   { font-size: .9rem; color: var(--text); margin-bottom: 12px; font-weight: 500; }
 
 .timeline__list {
   list-style: none;
@@ -680,7 +680,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent);
 }
 
-.timeline__list strong { color: var(--text); }
+.timeline__list strong { color: var(--accent-2); font-weight: 700; }
 
 /* =============================================
    AWARDS
@@ -728,8 +728,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .award-card__date {
-  font-size: .78rem;
-  color: var(--accent-2);
+  font-size: .85rem;
+  color: var(--text);
   font-weight: 500;
   margin-bottom: 6px;
 }
@@ -740,7 +740,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.5;
 }
 
-.award-card__desc strong { color: var(--text); }
+.award-card__desc strong { color: var(--accent-2); font-weight: 700; }
 
 /* =============================================
    FOOTER
@@ -792,14 +792,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 .timeline-group {
-  font-size: .85rem;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin: 72px 0 32px;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 80px 0 36px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
 }
-.timeline-group:first-of-type { margin-top: 16px; }
+.timeline-group:first-of-type { margin-top: 8px; }
 .timeline__list a { color: var(--accent-2); text-decoration: underline; }
 
 
@@ -821,3 +822,7 @@ a.tag--link,
 }
 a.tag--link:hover,
 .timeline__title a:hover { color: var(--accent-2); }
+
+/* Nav a little bigger */
+.nav__logo { font-size: 1.15rem; }
+.nav__links a { font-size: 1rem; }
