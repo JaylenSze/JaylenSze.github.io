@@ -2,8 +2,6 @@
 
 Live at [jaylensze.github.io](https://jaylensze.github.io)
 
-This is my personal site. It's plain HTML, CSS and JavaScript with no frameworks or build step, hosted for free on GitHub Pages. I wanted something simple that I could edit quickly and fully understand.
-
 ## What's on it
 
 - A short intro with links to my GitHub, LinkedIn, email and resume
