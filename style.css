@@ -16,8 +16,8 @@
   --accent:    #7c6ff0;
   --accent-2:  #a89cf5;
   --gold:      #e8a030;
-  --text:      #eef1f7;
-  --text-muted:#b8c0d0;
+  --text:      #ffffff;
+  --text-muted:#ffffff;
   --green:     #52c57a;
   --blue:      #5b9cf6;
   --radius:    10px;
@@ -271,8 +271,8 @@ a { color: inherit; text-decoration: none; }
   margin-right: auto;
 }
 
-.hero__tagline-sep { color: var(--accent-2); margin: 0 8px; font-weight: 400; }
-.hero__tagline-seek { color: var(--accent-2); display: inline-block; }
+.hero__tagline-main { display: block; }
+.hero__tagline-seek { display: block; margin-top: 6px; font-size: .85em; font-weight: 500; color: #fff; }
 
 .hero__sub {
   color: var(--text-muted);
