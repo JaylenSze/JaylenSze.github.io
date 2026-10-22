@@ -794,8 +794,17 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin: 40px 0 20px;
+  margin: 72px 0 32px;
 }
-.timeline-group:first-of-type { margin-top: 0; }
+.timeline-group:first-of-type { margin-top: 16px; }
 .timeline__list a { color: var(--accent-2); text-decoration: underline; }
 
+
+.award-card__link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: .85rem;
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+.award-card__link:hover { color: var(--text); }
