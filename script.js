@@ -59,9 +59,9 @@ const sectionObserver = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navLinks.forEach(link => {
-          link.style.color = '';
+          link.classList.remove('active');
           if (link.getAttribute('href') === `#${entry.target.id}`) {
-            link.style.color = 'var(--accent-2)';
+            link.classList.add('active');
           }
         });
       }
@@ -71,3 +71,33 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach(s => sectionObserver.observe(s));
+
+
+/* =============================================
+   TIMELINE: scroll fill, lit dots, expand/collapse
+   ============================================= */
+const vtl = document.getElementById('vtl');
+if (vtl) {
+  const fill = document.getElementById('vtlFill');
+  const items = [...vtl.querySelectorAll('.vtl__item')];
+  const updateTimeline = () => {
+    const rect = vtl.getBoundingClientRect();
+    const mid = window.innerHeight * 0.55;
+    const progress = Math.min(Math.max(mid - rect.top, 0), rect.height);
+    fill.style.height = progress + 'px';
+    items.forEach(it => it.classList.toggle('lit', it.getBoundingClientRect().top + 30 < mid));
+  };
+  window.addEventListener('scroll', updateTimeline, { passive: true });
+  window.addEventListener('resize', updateTimeline);
+  updateTimeline();
+
+  vtl.querySelectorAll('.vtl__more').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.vtl__item');
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+      btn.firstChild.textContent = open ? 'Show less' : 'Show more';
+      updateTimeline();
+    });
+  });
+}
