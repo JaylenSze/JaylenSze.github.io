@@ -10,7 +10,7 @@ This is my personal site. It's plain HTML, CSS and JavaScript with no frameworks
 - Education and technical skills
 - Projects: Wikipedia Racing, Mic Drop Madness and FacePalm
 - Leadership and activities, split into current, university projects and high school
-- Awards, including the Putnam, Euclid, Cayley and CCC, with links to certificates
+- Awards, including the Putnam, Euclid, Cayley and CCC, with links to the official contest results
 
 ## Contact
 
