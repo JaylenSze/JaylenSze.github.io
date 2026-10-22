@@ -1,75 +1,54 @@
-# Jaylen Sze | Personal Website
+# Jaylen Sze's Personal Website
 
-> **Live site:** [jaylensze.github.io](https://jaylensze.github.io)
+Live at [jaylensze.github.io](https://jaylensze.github.io)
 
-Personal portfolio website built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, just fast static files hosted on GitHub Pages.
+This is my personal site. It's plain HTML, CSS and JavaScript with no frameworks or build step, hosted for free on GitHub Pages. I wanted something simple that I could edit quickly and fully understand.
 
----
+## What's on it
 
-## 📸 Sections
+- A short intro with links to my GitHub, LinkedIn, email and resume
+- Education and technical skills
+- Projects: Wikipedia Racing, Mic Drop Madness and FacePalm
+- Leadership and activities, split into current, university projects and high school
+- Awards, including the Putnam, Euclid, Cayley and CCC, with links to certificates
 
-- **Hero** — intro with links to GitHub, LinkedIn, and email
-- **Education** — University of Toronto, GPA 3.97/4.0
-- **Technical Skills** — languages, tools, and frameworks with proficiency levels
-- **Projects** — Wikipedia Racing, Mic Drop Madness, FacePalm
-- **Leadership** — Math Club founder, Frisbee team captain
-- **Awards** — Dean's List, Putnam, Governor General's Medal, Euclid, CCC
-
----
-
-## 🛠 Tech Stack
-
-| Layer | Tech |
-|---|---|
-| Markup | HTML5 |
-| Styles | CSS3 (custom properties, grid, flexbox, animations) |
-| Scripts | Vanilla JavaScript (IntersectionObserver, no dependencies) |
-| Fonts | [Inter](https://fonts.google.com/specimen/Inter) + [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) via Google Fonts |
-| Hosting | GitHub Pages |
-
----
-
-## 📁 File Structure
+## How it's put together
 
 ```
 .
-├── index.html   # Main page and all content
-├── style.css    # All styles and responsive design
-├── script.js    # Scroll animations, sticky nav, mobile menu
-└── README.md    # This file
+├── index.html   # the page and all of its content
+├── style.css    # styling and responsive layout
+├── script.js    # scroll animations, sticky nav, mobile menu
+├── js-icon.png  # favicon
+└── files/       # resume and certificate PDFs
 ```
 
----
+Fonts are Inter and JetBrains Mono from Google Fonts. The scroll animations use `IntersectionObserver`, so there are no libraries to install.
 
-## 🚀 Running Locally
+## Running it locally
 
-No build step needed — just open the file:
+Open `index.html` in a browser. If you'd rather use a local server:
 
 ```bash
-# Option 1: open directly in your browser
-start index.html
-
-# Option 2: serve with Python (avoids any CORS quirks)
 python -m http.server 8000
-# then visit http://localhost:8000
 ```
 
----
+Then go to http://localhost:8000.
 
-## 🔄 Deploying Updates
+## Updating it
+
+Edit the files, then:
 
 ```bash
 git add .
-git commit -m "your message here"
+git commit -m "what I changed"
 git push
 ```
 
-GitHub Pages redeploys automatically within ~1 minute.
+GitHub Pages picks up the change in about a minute.
 
----
+## Contact
 
-## 📬 Contact
-
-- **Email:** [jaylensze@gmail.com](mailto:jaylensze@gmail.com)
-- **LinkedIn:** [linkedin.com/in/jaylensze](https://www.linkedin.com/in/jaylensze/)
-- **GitHub:** [github.com/JaylenSze](https://github.com/JaylenSze)
+- Email: [jaylensze@gmail.com](mailto:jaylensze@gmail.com)
+- LinkedIn: [linkedin.com/in/jaylensze](https://www.linkedin.com/in/jaylensze/)
+- GitHub: [github.com/JaylenSze](https://github.com/JaylenSze)
