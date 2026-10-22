@@ -943,3 +943,54 @@ body, p, li, span, h1, h2, h3, h4, label { color: #fff; }
   .vtl__era + .vtl__item--right { margin-top: 0; }
 }
 
+
+/* =============================================
+   PURPLE SKILL PILLS, BLUEPRINT BACKGROUND, SPOTLIGHT
+   ============================================= */
+.skill-level--adv { background: rgba(124,111,240,.22); color: #fff; }
+.skill-level--int { background: rgba(124,111,240,.10); color: #fff; }
+.skill-level--beg { background: rgba(255,255,255,.07); color: #fff; }
+
+body { background-color: #0b0b0f; position: relative; }
+.site-bg-blueprint {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(168,156,245,.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168,156,245,.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.site-bg-blueprint::before {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 800px; max-width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168,156,245,.5), transparent);
+}
+.hero__light-spotlight {
+  position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%);
+  width: min(780px, 100%); height: 440px;
+  background: radial-gradient(ellipse, rgba(124,111,240,.2) 0%, rgba(124,111,240,.06) 50%, transparent 75%);
+  filter: blur(70px); pointer-events: none; z-index: 0;
+}
+section, footer { position: relative; z-index: 1; }
+.section--alt { background: rgba(255,255,255,.015); }
+.edu-card, .skill-card, .project-card, .award-card, .vtl__card {
+  background: rgba(22,22,29,.72);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.footer { background: transparent; }
+
+/* =============================================
+   SMALLER OVERALL
+   ============================================= */
+html { font-size: 15px; }
+body { font-size: 16px; }
+.section { padding: 72px 0; }
+.section__title { font-size: clamp(2rem, 4.5vw, 2.6rem); margin-bottom: 36px; }
+.hero__name { font-size: clamp(3rem, 10vw, 6rem); }
+.hero__tagline { font-size: clamp(1rem, 2.2vw, 1.25rem); }
+.hero__sub span { font-size: clamp(.9rem, 2vw, 1.05rem); }
+.nav__logo { font-size: 1.2rem; }
+.nav__links a { font-size: 1rem; padding: 6px 12px; }
+.vtl__title { font-size: 1.1rem; }
+.vtl__era span { font-size: 1.1rem; padding: 6px 22px; }
+.vtl__item { padding-bottom: 28px; }
+@media (max-width: 600px) { .section { padding: 56px 0; } }
