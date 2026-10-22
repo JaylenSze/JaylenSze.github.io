@@ -808,3 +808,13 @@ a { color: inherit; text-decoration: none; }
   text-decoration: underline;
 }
 .award-card__link:hover { color: var(--text); }
+
+/* Text links are underlined so they're easy to spot */
+a.tag--link,
+.timeline__title a,
+.footer__links a[href^="mailto:"] {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a.tag--link:hover,
+.timeline__title a:hover { color: var(--accent-2); }
