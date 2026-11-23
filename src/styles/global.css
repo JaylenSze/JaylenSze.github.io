@@ -994,3 +994,42 @@ body { font-size: 16px; }
 .vtl__era span { font-size: 1.1rem; padding: 6px 22px; }
 .vtl__item { padding-bottom: 28px; }
 @media (max-width: 600px) { .section { padding: 56px 0; } }
+
+/* =============================================
+   SUB-PAGES (projects, blog)
+   ============================================= */
+.page { padding: 140px 0 100px; min-height: 70vh; }
+
+.section__more { margin-top: 32px; }
+.section__more a,
+.page__back a,
+.page__links a,
+.page__meta a,
+.post-list a,
+.prose a { text-decoration: underline; text-underline-offset: 3px; }
+
+.project-card__title a:hover { color: var(--accent-2); }
+
+.prose { max-width: 720px; }
+.prose h1 { font-size: clamp(2.2rem, 5vw, 3rem); margin-bottom: 12px; }
+.prose h2 { font-size: 1.5rem; margin: 40px 0 12px; }
+.prose h3 { font-size: 1.2rem; margin: 28px 0 8px; }
+.prose p,
+.prose ul,
+.prose ol { margin-bottom: 18px; }
+.prose ul,
+.prose ol { padding-left: 1.4em; }
+.prose img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.prose pre { padding: 16px; border-radius: var(--radius); overflow-x: auto; margin-bottom: 18px; }
+.prose code { font-family: 'JetBrains Mono', monospace; font-size: .9em; }
+.prose .tag-list { margin-bottom: 28px; }
+
+.page__back { margin-bottom: 24px; }
+.page__meta { opacity: .75; margin-bottom: 16px; }
+.page__links { display: flex; gap: 24px; margin-top: 32px; }
+
+.post-list { list-style: none; padding: 0; margin: 32px 0; }
+.post-list li { padding: 20px 0; border-bottom: 1px solid var(--border); }
+.post-list a { font-size: 1.25rem; font-weight: 600; }
+.post-list__date { display: block; opacity: .75; font-size: .9rem; margin: 4px 0 8px; }
+.post-list p { margin: 0; }

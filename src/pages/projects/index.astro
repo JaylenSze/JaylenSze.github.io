@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getProjects } from '../../lib/content';
+
+const projects = await getProjects();
+---
+<BaseLayout title="Projects | Jaylen Sze" description="Things Jaylen Sze has built: course projects, hackathon entries and current work.">
+  <main class="page">
+    <div class="container">
+      <h1 class="section__title">Projects</h1>
+      <div class="projects-grid">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </main>
+</BaseLayout>

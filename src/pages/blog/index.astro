@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatDay, getPosts } from '../../lib/content';
+
+const posts = await getPosts();
+---
+<BaseLayout title="Blog | Jaylen Sze" description="Notes and write-ups from Jaylen Sze on what I'm building and learning.">
+  <main class="page">
+    <div class="container prose">
+      <h1>Blog</h1>
+      {posts.length === 0 ? (
+        <p>No posts yet. The first one is on the way.</p>
+      ) : (
+        <ul class="post-list">
+          {posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+              <span class="post-list__date">{formatDay(post.data.date)}{post.data.draft && ' · Draft'}</span>
+              <p>{post.data.summary}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+      <p class="page__meta"><a href="/rss.xml">RSS feed</a></p>
+    </div>
+  </main>
+</BaseLayout>

@@ -60,7 +60,7 @@ const sectionObserver = new IntersectionObserver(
       if (entry.isIntersecting) {
         navLinks.forEach(link => {
           link.classList.remove('active');
-          if (link.getAttribute('href') === `#${entry.target.id}`) {
+          if (link.getAttribute('href').endsWith(`#${entry.target.id}`)) {
             link.classList.add('active');
           }
         });

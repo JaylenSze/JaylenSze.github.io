@@ -1,0 +1,35 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatMonth, getProjects } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((project) => ({ params: { id: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { title, date, context, status, award, tags, repo, demo } = project.data;
+const { Content } = await render(project);
+const statusLabel = { shipped: 'Shipped', 'in-progress': 'In progress', archived: 'Archived' }[status];
+---
+<BaseLayout title={`${title} | Jaylen Sze`} description={`${title}: ${context}.`}>
+  <main class="page">
+    <article class="container prose">
+      <p class="page__back"><a href="/projects/">← All projects</a></p>
+      <h1>{title}</h1>
+      <p class="page__meta">{formatMonth(date)} · {context} · {statusLabel}</p>
+      {award && <p class="project-card__badge">{award}</p>}
+      <div class="tag-list tag-list--sm">
+        {tags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+      <Content />
+      {(repo || demo) && (
+        <p class="page__links">
+          {repo && <a href={repo} target="_blank" rel="noopener">Source on GitHub</a>}
+          {demo && <a href={demo} target="_blank" rel="noopener">Live demo</a>}
+        </p>
+      )}
+    </article>
+  </main>
+</BaseLayout>

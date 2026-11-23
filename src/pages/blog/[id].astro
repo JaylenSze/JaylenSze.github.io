@@ -1,0 +1,29 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatDay, getPosts } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { title, summary, date, tags } = post.data;
+const { Content } = await render(post);
+---
+<BaseLayout title={`${title} | Jaylen Sze`} description={summary}>
+  <main class="page">
+    <article class="container prose">
+      <p class="page__back"><a href="/blog/">← All posts</a></p>
+      <h1>{title}</h1>
+      <p class="page__meta">{formatDay(date)}</p>
+      {tags.length > 0 && (
+        <div class="tag-list tag-list--sm">
+          {tags.map((tag) => <span class="tag">{tag}</span>)}
+        </div>
+      )}
+      <Content />
+    </article>
+  </main>
+</BaseLayout>
