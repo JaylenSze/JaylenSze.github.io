@@ -5,8 +5,8 @@ date: 2025-04-01
 context: Lockdown 2025 High School Hackathon
 status: shipped
 featured: true
-icon: 🎤
-award: 🥈 2nd Place — 23 teams
+icon: ""
+award: 2nd Place — 23 teams
 tags: [Python, PyGame, Gemini API, Audio Processing]
 repo: https://github.com/JaylenSze/MicDropMadness
 ---

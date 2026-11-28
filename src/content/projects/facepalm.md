@@ -5,8 +5,8 @@ date: 2025-03-01
 context: Scrapyard 2025 High School Hackathon
 status: shipped
 featured: true
-icon: 😐
-award: 🥈 2nd Place — 29 teams
+icon: ""
+award: 2nd Place — 29 teams
 tags: [Python, Flask, Gemini API, DeepFace]
 repo: https://github.com/MichaelZjQu/FacePalm
 ---

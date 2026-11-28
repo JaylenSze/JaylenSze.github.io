@@ -5,7 +5,7 @@ date: 2026-03-01
 context: Course Project
 status: shipped
 featured: true
-icon: 🕸️
+icon: ""
 tags: [Python, Graph Theory, NetworkX, BFS]
 repo: https://github.com/JaylenSze/CSC111Project2
 ---

@@ -27,6 +27,6 @@ npm run build    # production build into dist/
 
 ## Contact
 
-- Email: [jaylensze@gmail.com](mailto:jaylensze@gmail.com)
+- Email: jaylensze at gmail dot com
 - LinkedIn: [linkedin.com/in/jaylensze](https://www.linkedin.com/in/jaylensze/)
 - GitHub: [github.com/JaylenSze](https://github.com/JaylenSze)

@@ -101,3 +101,31 @@ if (vtl) {
     });
   });
 }
+
+/* Email assembled on click so the address is not in the page source */
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[data-mail]');
+  if (!a) return;
+  e.preventDefault();
+  const [u, d, t] = a.dataset.mail.split('|');
+  window.location.href = 'mailto:' + u + String.fromCharCode(64) + d + '.' + t;
+});
+
+
+/* Theme toggle (light by default) */
+(function () {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const root = document.documentElement;
+  const sync = () => {
+    const dark = root.dataset.theme === 'dark';
+    btn.textContent = dark ? 'Light' : 'Dark';
+    btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  };
+  sync();
+  btn.addEventListener('click', () => {
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    sync();
+  });
+})();
