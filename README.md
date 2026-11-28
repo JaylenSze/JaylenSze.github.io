@@ -4,11 +4,11 @@ Live at [jaylensze.github.io](https://jaylensze.github.io)
 
 ## What's on it
 
-- A short intro with links to my GitHub, LinkedIn, email and resume
-- Education and technical skills
-- Projects: Wikipedia Racing, Mic Drop Madness and FacePalm
-- Leadership and activities, split into current, university projects and high school
-- Awards, including the Putnam, Euclid, Cayley and CCC, with links to the official contest results
+- Hero section with my name, U of T CS & Math, "Aspiring Researcher", and contact email
+- Light and dark theme toggle (light theme by default, saved in `localStorage`)
+- Interactive timeline of current work (clubs, research, and active projects with GitHub links) plus collapsible University and High School entries, including past projects (Wikipedia Racing, Mic Drop Madness, FacePalm)
+- Awards list (Innis Later Life Scholarship, Dean's List, Putnam, Governor General's Academic Medal, Euclid, CCC Senior Division Honour Roll, Cayley) with links to official contest results
+- Top nav with links to Timeline, Awards, Resume, GitHub, and the theme toggle; footer with email, GitHub, and LinkedIn
 
 ## Working on the site
 
@@ -20,10 +20,10 @@ npm run dev      # local preview at http://localhost:4321
 npm run build    # production build into dist/
 ```
 
-- Homepage: `src/pages/index.astro`, layout in `src/layouts/BaseLayout.astro`, styles in `src/styles/global.css`
-- Projects: one Markdown file per project in `src/content/projects/`. Set `featured: true` to show it on the homepage
-- Blog posts: one Markdown file per post in `src/content/blog/`. Posts with `draft: true` only show in `npm run dev`
-- PDFs and other static files: `public/`
+- Homepage: `src/pages/index.astro`, layout in `src/layouts/BaseLayout.astro`, styles in `src/styles/global.css`, client script in `public/script.js`
+- Project detail pages (`/projects/`): Markdown files in `src/content/projects/`
+- Blog posts (`/blog/`, `/rss.xml`): Markdown files in `src/content/blog/`. Posts with `draft: true` only show in `npm run dev`
+- Static files (resume, contest result PDFs, favicons): `public/`
 
 ## Contact
 
